@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    width: 450px;
+    height: 200px;
+    overflow: hidden;
+    background-color: chocolate;
+    font-size: 2em;
+    opacity: 0.9;
+    position: relative;
+}
+
+.btn::before {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: brown;
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    transition-duration: 1s;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.btn:hover::before{
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+}
+
+.btn::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: brown;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    transition-duration: 1s;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.btn:hover::after {
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+/* .container .text{
+    border: 1px solid;
+    color: brown;
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    font-size: 3em;
+    padding: 14px;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 3s;
+} */
+/* .container .text :hover{
+    background-color: brown;
+}
+.container::before{
+    content: "";
+    width: 50%;
+    position: absolute;
+    background-color: blue;
+    height: 100%;
+    transform-origin: right top;
+    transform: rotateX(90deg);
+    transition-duration: 3s;
+    transition-property: background-color;
+}
+.container .text :hover{
+    background-color: brown;
+    transform: rotate(0);
+} */
